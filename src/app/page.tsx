@@ -93,7 +93,7 @@ export default function Home() {
     };
   }, []);
 
-  const renderRugbyImageByScreenSize = () => {
+  const renderRugbyPlayer = () => {
     if (windowSize?.width >= DESKTOP_WIDTH) {
       return <img className='image-left' src={RUGBY_PLAYER}/>;
     } else if (
@@ -103,7 +103,7 @@ export default function Home() {
       return <img className='image-left' src={RUGBY_PLAYER_TABLET}/>;
     }
   };
-  const renderBassImageByScreenSize = () => {
+  const renderBasketBallPlayer = () => {
     if (windowSize?.width >= DESKTOP_WIDTH) {
       return <img className='image-right' src={BASKETBALL_PLAYER}/>;
     } else if (
@@ -117,7 +117,7 @@ export default function Home() {
   return (
     <main>
       <div className='content'>
-        {renderRugbyImageByScreenSize()}
+        {renderRugbyPlayer()}
         <div className='header-right'>ATHLETS</div>
         {windowSize?.width < TABLET_WIDTH && (
           <img className='image-left' src={RUGBY_PLAYER_MOBILE}/>
@@ -129,7 +129,7 @@ export default function Home() {
       </div>
 
       <div className='content'>
-        {renderBassImageByScreenSize()}
+        {renderBasketBallPlayer()}
         <div className='header-left'>PLAYERS</div>
         {windowSize?.width < TABLET_WIDTH && (
           <img className='image-right' src={BASKETBALL_PLAYER_MOBILE}/>
